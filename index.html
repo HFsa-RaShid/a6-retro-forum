@@ -26,8 +26,7 @@
           extend: {
             colors: {
               "primary-color": "#797DFC",
-              "heading-color": "#131318",
-              
+              "text-color": "#12132D99",
             },
           },
         },
@@ -173,7 +172,7 @@
             BookMark
           </div>
 
-          <button class="p-2 lg:p-4 bg-[#797DFC] text-white rounded-[50px]">
+          <button class="p-2 lg:p-4 bg-[#797DFC] text-white rounded-2xl">
             Sign Up
           </button>
         </div>
@@ -182,51 +181,69 @@
       <!-- banner -->
 
       <div
-        class="bg-cover bg-center bg-opacity-100 h-[500px] bg-[#12132D] rounded-3xl mt-5"
+        class="bg-cover bg-center bg-opacity-100 h-[700px] lg:h-[500px] bg-[#12132D] rounded-3xl mt-5"
         style="background-image: url('images/bgbanner.png')"
       >
-        <div class=" w-full flex">
-          <div class="w-[50%] pl-20 pt-20">
-            <h1 class="text-white text-[64px] font-extrabold">
+        <div class="w-full lg:flex">
+          <div class="lg:w-[50%] pl-10 pr-10 lg:pl-20 pt-20">
+            <h1 class="text-white text-[40px] lg:text-[64px] font-extrabold">
               Welcome to the
             </h1>
-            <h1 class="text-white text-[64px] font-extrabold">
+            <h1 class="text-white text-[40px] lg:text-[64px] font-extrabold">
               <span
                 class="bg-clip-text text-transparent bg-gradient-to-r from-[#878aec] to-[#2023ac] bg-opacity-0 text-transparen"
                 >ReTro </span
               >Forum
             </h1>
-            <p class="text-white pt-5">Share your favorite opinion and win and wp forum coffee mug!</p>
+            <p class="text-white pt-5">
+              Share your favorite opinion and win and wp forum coffee mug!
+            </p>
 
             <div class="bg-white rounded-2xl flex justify-between mt-10">
-                <input class="rounded-2xl pl-4" type="text" name="" id="search-btn" placeholder="Search here anything">
-                <button class="mx-2 my-2 px-4 py-2 text-white rounded-2xl bg-primary-color">Search</button>
+              <input
+                class="rounded-2xl pl-4"
+                type="text"
+                name=""
+                id="search-btn"
+                placeholder="Search here anything"
+              />
+              <button
+                class="mx-2 my-2 px-4 py-2 text-white rounded-2xl bg-primary-color"
+              >
+                Search
+              </button>
             </div>
-            
           </div>
-          <div class="w-[50%]">
-            <div class="w-[60%] bg-white mx-auto h-[250px] mt-32 rounded-3xl ">
-                <div class="flex justify-between px-10 py-5">
-                    <div>Registered Users</div>
-                    <div>01</div>
-                </div>
-                <div class="flex justify-between px-10 py-4">
-                    <div>Forum</div>
-                    <div>05</div>
-                </div>
-                <div class="flex justify-between px-10 py-4">
-                    <div>Topics</div>
-                    <div>01</div>
-                </div>
-                <div class="flex justify-between px-10 py-4">
-                    <div>Replies</div>
-                    <div>01</div>
-                </div>
+          <div class="lg:w-[50%]">
+            <div
+              class="w-[60%] bg-white mx-auto h-[250px] mt-10 lg:mt-32 rounded-3xl"
+            >
+              <div class="flex justify-between px-10 py-5">
+                <div>Registered Users</div>
+                <div>01</div>
+              </div>
+              <div class="flex justify-between px-10 py-4">
+                <div>Forum</div>
+                <div>05</div>
+              </div>
+              <div class="flex justify-between px-10 py-4">
+                <div>Topics</div>
+                <div>01</div>
+              </div>
+              <div class="flex justify-between px-10 py-4">
+                <div>Replies</div>
+                <div>01</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+    <main class="container mx-auto">
+      <section class="flex">
+        <div id="post-container" class="w-[60%] "></div>
+      </section>
+    </main>
 
     <script src="retro.js"></script>
   </body>
