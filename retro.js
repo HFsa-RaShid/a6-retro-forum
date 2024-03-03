@@ -32,6 +32,7 @@ function showToolTip1() {
 
 
 //   discuss
+let ReadMarkCount=0;
 
 const loadPost= async () =>{
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
@@ -51,9 +52,9 @@ const displayPosts = post =>{
         
         postCard.classList.add= `w-full bg-grey flex`;
         postCard.innerHTML= `
-        <div class="flex h-[200px] bg-[#F3F3F5] w-full mb-10 rounded-2xl pt-10" >
+        <div class="flex h-[200px] bg-[#F3F3F5] w-full mb-10 rounded-2xl pt-3 lg:pt-10" >
                 <div class="w-[20%] ">
-                    <div class="w-[70%] h-[60%] pl-8 relative">
+                    <div class="w-[70%] h-full lg:h-[60%] pl-2 lg:pl-8 relative">
                         <img src="${postInfo.image}" alt="" srcset="" class="rounded-xl">
                         
                         <div class="bg-white  rounded-full absolute w-[14px] h-[14px] top-0 right-0 ">
@@ -72,7 +73,7 @@ const displayPosts = post =>{
                     </div>
                     <div>
                         <p class="text-[#12132D] font-extrabold text-[20px] pt-3 pb-3">${postInfo.title}</p>
-                        <p class="text-text-color pb-3">${postInfo.description}</p>
+                        <p class="text-text-color pb-1 lg:pb-3">${postInfo.description}</p>
                     </div>
                     <div class="flex">
                         <div class="flex w-[90%] gap-10">
@@ -153,8 +154,8 @@ const displayPosts = post =>{
             const appendDiv = document.createElement(`div`);
             appendDiv.classList.add('bg-white','h-[70px]','w-[90%]','mb-2','rounded-xl','mx-auto','p-3');
             appendDiv.innerHTML = `
-                <div class="flex justify-between pt-3">
-                    <p>${postInfo.title}</p>
+                <div class="flex justify-between pt-1 lg:pt-3">
+                    <p class="font-semibold">${postInfo.title}</p>
                     <div class="flex items-center gap-2">
                           <svg width="22.500000" height="15.500000" viewBox="0 0 22.5 15.5" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                           <desc>
@@ -169,6 +170,8 @@ const displayPosts = post =>{
                     
                 </div>
             `;
+            ReadMarkCount++;
+            document.getElementById('ReadMarkCount').innerText=ReadMarkCount;
             // Append the new div to postReadMark
             postReadMark.appendChild(appendDiv);
         });
@@ -177,7 +180,5 @@ const displayPosts = post =>{
     })
         
 }
-function markRead(element){
-  let seat=document.getElementById(element);
-}
+
 loadPost();
