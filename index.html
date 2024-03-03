@@ -13,9 +13,12 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- manrope google font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <!-- tailwind custom color -->
     <script>
       tailwind.config = {
@@ -193,18 +196,22 @@
               >Forum
             </h1>
             <p class="text-white opacity-80 pt-5">
-              "Welcome to our vibrant forum community! Whether you're here to seek advice, share your expertise, or connect with like-minded individuals, you're in the right place."
+              "Welcome to our vibrant forum community! Whether you're here to
+              seek advice, share your expertise, or connect with like-minded
+              individuals, you're in the right place."
             </p>
 
             <div class="bg-white rounded-2xl flex justify-between mt-10">
-              <input id="search-field"
+              <input
+                id="search-field"
                 class="rounded-2xl pl-4 w-[90%]"
                 type="text"
                 name=""
                 id="search-btn"
                 placeholder="Search here anything"
               />
-              <button onclick="handleSearch()"
+              <button
+                onclick="handleSearch()"
                 class="mx-2 my-2 px-4 py-2 text-white rounded-2xl bg-primary-color"
               >
                 Search
@@ -240,13 +247,25 @@
       <section class="mt-12">
         <h1 class="font-extrabold text-4xl text-center">Let’s Discuss</h1>
         <p class="text-center pt-5">
-          "This is where ideas collide, perspectives are shared, and conversations ignite. Dive into topics that matter to you,
+          "This is where ideas collide, perspectives are shared, and
+          conversations ignite. Dive into topics that matter to you,
         </p>
         <p class="text-center text-texr-color pb-10">
           engage with fellow members, and let your voice be heard."
         </p>
 
+        <div class="hidden" id="loading-spinner">
+          <div class="flex justify-center my-10">
+            <span class="loading loading-spinner loading-md "></span>
+            <span class="loading loading-spinner loading-lg"></span>
+          </div>
+
+        </div>
+
+        
+
         <div class="lg:flex justify-between">
+          
           <div id="post-container" class="w-full lg:w-[59%]"></div>
           <div class="w-full lg:w-[39%]">
             <div id="post-readMark" class="bg-[#F3F3F5] pb-3 rounded-xl">
@@ -318,7 +337,7 @@
               Join Our Forum
             </h1>
             <p class="text-white opacity-80">
-              "Ready to join the conversation? Sign up now and become  
+              "Ready to join the conversation? Sign up now and become
             </p>
             <p class="text-white opacity-80 pb-8">
               part of our thriving forum community!"
@@ -345,7 +364,9 @@
           conversations of tomorrow."
         </p>
       </div>
-      <div class="flex w-[40%] lg:w-[15%] mx-auto justify-between mt-5 lg:mt-10">
+      <div
+        class="flex w-[40%] lg:w-[15%] mx-auto justify-between mt-5 lg:mt-10"
+      >
         <svg
           width="19.887848"
           height="15.999268"
@@ -437,8 +458,9 @@
         </svg>
       </div>
       <hr class="border border-gray-300 border-dashed mt-10 mb-8" />
-      <p class="text-center text-[#12132DB3] text-[12px]">2017, All Rights Reserved.</p>
-
+      <p class="text-center text-[#12132DB3] text-[12px]">
+        2017, All Rights Reserved.
+      </p>
     </footer>
 
     <script src="retro.js"></script>

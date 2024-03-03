@@ -159,9 +159,12 @@ const displayPosts = (post) =>{
 
         postContainer.appendChild(postCard);
 
+        // hide loading spinner
+        toggleLoadingSpinner(false);
+
+
 
         // click and append
-
 
         const clickMessage = postCard.querySelector('#click');
         clickMessage.addEventListener('click', () => {
@@ -198,6 +201,7 @@ const displayPosts = (post) =>{
 
 const handleSearch= () =>
 {
+  toggleLoadingSpinner(true);
   const searchField = document.getElementById('search-field');
   const searchText = searchField.value;
   console.log(searchText);
@@ -212,4 +216,33 @@ const handleSearch= () =>
 }
 
 loadPost();
+
+
+const toggleLoadingSpinner = (isLoading) =>
+{
+      const loadingSpinner = document.getElementById('loading-spinner');
+      if(isLoading)
+      {
+        loadingSpinner.classList.remove('hidden');
+      }
+      else{
+        loadingSpinner.classList.add('hidden');
+      }
+
+      //add the timeout
+
+      const Id = setTimeout(() => {
+        loadingSpinner.classList.add('hidden');
+      }, 3000);
+
+    // Clear the timeout
+    const clearSpinnerTimeout = () => {
+        clearTimeout(Id);
+        loadingSpinner.classList.add('hidden');
+    };
+
+    return clearSpinnerTimeout;
+      
+};
+
 
