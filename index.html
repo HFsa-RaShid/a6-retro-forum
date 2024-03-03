@@ -13,12 +13,9 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- manrope google font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <!-- tailwind custom color -->
     <script>
       tailwind.config = {
@@ -34,11 +31,11 @@
     </script>
     <style>
       .font-style {
-        font-family: "Manrope", sans-serif;
+        font-family: "Mulish", sans-serif;
       }
     </style>
   </head>
-  <body>
+  <body class="font-style">
     <header class="container mx-auto mt-5">
       <nav class="flex justify-between">
         <div>
@@ -185,7 +182,7 @@
         style="background-image: url('images/bgbanner.png')"
       >
         <div class="w-full lg:flex">
-          <div class="lg:w-[50%] pl-10 pr-10 lg:pl-20 pt-20">
+          <div class="lg:w-[50%] pl-10 pr-10 lg:pl-20 pt-14">
             <h1 class="text-white text-[40px] lg:text-[64px] font-extrabold">
               Welcome to the
             </h1>
@@ -195,19 +192,19 @@
                 >ReTro </span
               >Forum
             </h1>
-            <p class="text-white pt-5">
-              Share your favorite opinion and win and wp forum coffee mug!
+            <p class="text-white opacity-80 pt-5">
+              "Welcome to our vibrant forum community! Whether you're here to seek advice, share your expertise, or connect with like-minded individuals, you're in the right place."
             </p>
 
             <div class="bg-white rounded-2xl flex justify-between mt-10">
-              <input
-                class="rounded-2xl pl-4"
+              <input id="search-field"
+                class="rounded-2xl pl-4 w-[90%]"
                 type="text"
                 name=""
                 id="search-btn"
                 placeholder="Search here anything"
               />
-              <button
+              <button onclick="handleSearch()"
                 class="mx-2 my-2 px-4 py-2 text-white rounded-2xl bg-primary-color"
               >
                 Search
@@ -243,11 +240,10 @@
       <section class="mt-12">
         <h1 class="font-extrabold text-4xl text-center">Let’s Discuss</h1>
         <p class="text-center pt-5">
-          Yes, you can run unit tests and view the results directly within the
-          app.
+          "This is where ideas collide, perspectives are shared, and conversations ignite. Dive into topics that matter to you,
         </p>
         <p class="text-center text-texr-color pb-10">
-          The integrated testing features allow for a streamlined .
+          engage with fellow members, and let your voice be heard."
         </p>
 
         <div class="lg:flex justify-between">
@@ -322,11 +318,10 @@
               Join Our Forum
             </h1>
             <p class="text-white opacity-80">
-              Share your favorite opinion and win and wp forum coffee mug!
+              "Ready to join the conversation? Sign up now and become  
             </p>
             <p class="text-white opacity-80 pb-8">
-              Yes, you can run unit tests and view the results directly within
-              the app.
+              part of our thriving forum community!"
             </p>
             <button class="bg-primary-color rounded-2xl px-8 py-3 text-white">
               Registered Now

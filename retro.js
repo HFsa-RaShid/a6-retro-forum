@@ -33,18 +33,33 @@ function showToolTip1() {
 
 //   discuss
 let ReadMarkCount=0;
+// let post =[];
 
 const loadPost= async () =>{
-    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
-    const data= await res.json();
-    const post = data.posts;
-    // console.log(post);
-    displayPosts(post)
+
+  const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+  const data= await res.json();
+  const post = data.posts;
+  // console.log(data);
+  displayPosts(post);
 
 }
-const displayPosts = post =>{
+
+const loadPostByCategory= async (searchText) =>{
+
+    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`);
+    const data= await res.json();
+    const post = data.posts;
+    // console.log(data);
+    displayPosts(post);
+
+}
+
+const displayPosts = (post) =>{
     const postContainer=document.getElementById('post-container');
     const postReadMark=document.getElementById('post-readMark');
+
+    postContainer.textContent= '';
     post.forEach(postInfo => {
         const active = postInfo.isActive;
 
@@ -181,4 +196,20 @@ const displayPosts = post =>{
         
 }
 
+const handleSearch= () =>
+{
+  const searchField = document.getElementById('search-field');
+  const searchText = searchField.value;
+  console.log(searchText);
+  if(searchText)
+  {
+    loadPostByCategory(searchText);
+  }
+  else{
+    loadPost();
+  }
+  
+}
+
 loadPost();
+
