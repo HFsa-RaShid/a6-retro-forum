@@ -90,6 +90,7 @@ const displayPosts = (post) =>{
                         <p class="text-text-color pb-1 lg:pb-3">${postInfo.description}</p>
                     </div>
                     <hr class="border border-dashed">
+                    
                     <div class="flex pt-2">
                         <div class="flex w-[90%] gap-5 lg:gap-10">
                             <div class="flex gap-4 items-center">
@@ -269,7 +270,7 @@ const displayLatestPosts = (data) =>{
       console.log(latestPostInfo);
 
         const LatestPostCard= document.createElement(`div`);
-        LatestPostCard.classList.add= (`card`, `lg:w-96`, `bg-base-100`, `shadow-xl`);
+        LatestPostCard.classList.add= (`card`, `bg-base-100`, `shadow-xl`);
         
         LatestPostCard.innerHTML= `
                 <figure class="px-10 pt-10 border border-t-[#12132D26] border-x-[#12132D26] border-b-white rounded-t-xl">
