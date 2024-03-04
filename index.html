@@ -40,6 +40,7 @@
   </head>
   <body class="font-style">
     <header class="container mx-auto mt-5">
+      <!-- nav -->
       <nav class="flex justify-between">
         <div>
           <h1 class="text-[#12132D] text-4xl font-extrabold">ReTro</h1>
@@ -72,7 +73,7 @@
           </div>
           <div
             id="toolTip1"
-            class="hidden bg-black text-white text-center p-1 absolute bottom-10 left-[0px] transform -translate-x-1/2"
+            class="hidden bg-black text-white text-center p-1 absolute bottom-10 left-[16px] transform -translate-x-1/2"
           >
             Home
           </div>
@@ -196,9 +197,9 @@
               >Forum
             </h1>
             <p class="text-white opacity-80 pt-5">
-              "Welcome to our vibrant forum community! Whether you're here to
+              Welcome to our vibrant forum community! Whether you're here to
               seek advice, share your expertise, or connect with like-minded
-              individuals, you're in the right place."
+              individuals, you're in the right place.
             </p>
 
             <div class="bg-white rounded-2xl flex justify-between mt-10">
@@ -244,28 +245,26 @@
       </div>
     </header>
     <main class="container mx-auto">
+      <!-- Let's Discuss -->
       <section class="mt-12">
-        <h1 class="font-extrabold text-4xl text-center">Let’s Discuss</h1>
-        <p class="text-center pt-5">
-          "This is where ideas collide, perspectives are shared, and
+        <div class="w-[350px] lg:w-[600px] mx-auto mb-6">
+          <h1 class="font-extrabold text-4xl text-center">Let's Discuss</h1>
+        <p class="text-center pt-5 text-text-color ">
+          This is where ideas collide, perspectives are shared, and
           conversations ignite. Dive into topics that matter to you,
+          engage with fellow members, and let your voice be heard.
         </p>
-        <p class="text-center text-texr-color pb-10">
-          engage with fellow members, and let your voice be heard."
-        </p>
+        
+        </div>
 
         <div class="hidden" id="loading-spinner">
           <div class="flex justify-center my-10">
-            <span class="loading loading-spinner loading-md "></span>
+            <span class="loading loading-spinner loading-md"></span>
             <span class="loading loading-spinner loading-lg"></span>
           </div>
-
         </div>
 
-        
-
         <div class="lg:flex justify-between">
-          
           <div id="post-container" class="w-full lg:w-[59%]"></div>
           <div class="w-full lg:w-[39%]">
             <div id="post-readMark" class="bg-[#F3F3F5] pb-3 rounded-xl">
@@ -328,6 +327,8 @@
           </div>
         </div>
       </section>
+
+      <!-- Join Our Forum -->
       <section>
         <div
           class="lg:flex rounded-3xl mt-5 h-[600px] lg:h-[400px] bg-[#12132D] relative"
@@ -351,6 +352,21 @@
             style="background-image: url('images/joinforum.png')"
           ></div>
         </div>
+      </section>
+
+      <!-- latest -->
+      <section class="mt-16">
+        <h1 class="font-extrabold text-4xl text-center">Latest Posts</h1>
+        <p class="text-center pt-5 text-text-color">
+          Experience the thrill of discovery with our freshest content! From
+          breaking news to
+        </p>
+        <p class="text-center text-texr-color pb-10 text-text-color">
+          thought-provoking features, explore our latest posts and uncover
+          something new.
+        </p>
+
+        <div id="latestPost-container" class="lg:flex gap-8 "></div>
       </section>
     </main>
     <footer class="bg-gray-200 h-[380px] mt-20">

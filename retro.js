@@ -33,7 +33,6 @@ function showToolTip1() {
 
 //   discuss
 let ReadMarkCount=0;
-// let post =[];
 
 const loadPost= async () =>{
 
@@ -204,7 +203,6 @@ const handleSearch= () =>
   toggleLoadingSpinner(true);
   const searchField = document.getElementById('search-field');
   const searchText = searchField.value;
-  console.log(searchText);
   if(searchText)
   {
     loadPostByCategory(searchText);
@@ -245,4 +243,69 @@ const toggleLoadingSpinner = (isLoading) =>
       
 };
 
+// latest post api fetch
+const loadLatestPost= async () =>{
 
+  fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
+  .then(response => response.json())
+  .then(data => {
+    displayLatestPosts(data);
+  })
+
+}
+
+// latest post api info display
+const displayLatestPosts = (data) =>{
+    const latestPostContainer=document.getElementById('latestPost-container');
+    data.forEach(latestPostInfo => {
+      console.log(latestPostInfo);
+
+        const LatestPostCard= document.createElement(`div`);
+        LatestPostCard.classList.add= (`card`, `lg:w-96`, `bg-base-100`, `shadow-xl`);
+        
+        LatestPostCard.innerHTML= `
+                <figure class="px-10 pt-10 border border-t-[#12132D26] border-x-[#12132D26] border-b-white rounded-t-xl">
+                <img src="${latestPostInfo.cover_image}" alt="Shoes" class="rounded-xl" />
+                </figure>
+
+                <div class="card-body  border rounded-b-xl border-x-[#12132D26] border-b-[#12132D26] border-t-white style="height: 300px;">
+                  
+                    <div class="flex gap-2  items-center">
+                    <svg class="h-5 w-5 text-slate-600"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />  <line x1="16" y1="2" x2="16" y2="6" />  <line x1="8" y1="2" x2="8" y2="6" />  <line x1="3" y1="10" x2="21" y2="10" /></svg>
+
+                    <p class="text-text-color">${latestPostInfo.author.posted_date ? latestPostInfo.author.posted_date : 'No publish date'}</P>
+                    </div>
+
+
+                    <h2 class="card-title font-bold">${latestPostInfo.title}</h2>
+                    <p class="text-text-color">${latestPostInfo.description}</p>
+                  
+                    
+                    <div class="flex mt-2 gap-3 class="flex-grow"">
+                        <div class="w-[12%]">
+                        <img src="${latestPostInfo.profile_image}" alt="" srcset="" class="rounded-full">
+                      
+                        </div>
+                        <div>
+                        <h1 class="font-bold">${latestPostInfo.author.name}</h1>
+                    
+                        <p class="text-text-color">${latestPostInfo.author.designation ? latestPostInfo.author.designation : 'Unknown'}</P>
+                        </div>
+                    
+                    
+                      
+                    </div>
+                </div>
+        `;
+        latestPostContainer.appendChild(LatestPostCard);
+    });
+
+    // card length
+    const cards = document.querySelectorAll('.card-body');
+    cards.forEach(card => {
+        card.style.height = `300px`;
+        card.style.overflowY = 'auto';
+        
+    });
+}
+loadLatestPost();
