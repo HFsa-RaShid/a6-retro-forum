@@ -91,7 +91,7 @@ const displayPosts = (post) =>{
                     </div>
                     <hr class="border border-dashed">
                     <div class="flex pt-2">
-                        <div class="flex w-[90%] gap-10">
+                        <div class="flex w-[90%] gap-5 lg:gap-10">
                             <div class="flex gap-4 items-center">
                             <svg width="22.500000" height="15.333374" viewBox="0 0 22.5 21.3334" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>

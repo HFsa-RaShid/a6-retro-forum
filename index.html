@@ -40,12 +40,12 @@
   </head>
 
 
-  
+
   <body class="font-style">
     <header class="container mx-auto mt-5">
       <!-- nav -->
       <nav class="flex justify-between">
-        <div>
+        <div class="w-[30%] lg:w-[50%]">
           <h1 class="text-[#12132D] text-4xl font-extrabold">ReTro</h1>
         </div>
         <div class="flex gap-1 lg:gap-4 items-center relative">
@@ -185,11 +185,11 @@
       <!-- banner -->
 
       <div
-        class="bg-cover bg-center bg-opacity-100 h-[700px] lg:h-[500px] bg-[#12132D] rounded-3xl mt-5"
+        class="bg-cover bg-center bg-opacity-100 h-[720px] lg:h-[500px] bg-[#12132D] rounded-3xl mt-5"
         style="background-image: url('images/bgbanner.png')"
       >
-        <div class="w-full lg:flex">
-          <div class="lg:w-[50%] pl-10 pr-10 lg:pl-20 pt-14">
+        <div class="lg:flex">
+          <div class="w-full lg:w-[50%] pl-10 pr-10 lg:pl-20 pt-14">
             <h1 class="text-white text-[40px] lg:text-[64px] font-extrabold">
               Welcome to the
             </h1>
@@ -224,17 +224,17 @@
           </div>
           <div class="lg:w-[50%]">
             <div
-              class="w-[60%] bg-white mx-auto h-[250px] mt-10 lg:mt-32 rounded-3xl"
+              class="w-[60%] bg-white mx-auto h-[200px] lg:h-[250px] mt-10 lg:mt-32 rounded-3xl"
             >
-              <div class="flex justify-between px-10 py-5">
+              <div class="flex justify-between px-10 py-4">
                 <div>Registered Users</div>
                 <div>01</div>
               </div>
-              <div class="flex justify-between px-10 py-4">
+              <div class="flex justify-between px-10 py-2 lg:py-4">
                 <div>Forum</div>
                 <div>05</div>
               </div>
-              <div class="flex justify-between px-10 py-4">
+              <div class="flex justify-between px-10 py-2 lg:py-4">
                 <div>Topics</div>
                 <div>01</div>
               </div>
@@ -357,23 +357,27 @@
         </div>
       </section>
 
-      <!-- latest -->
+      <!-- latest post -->
       <section class="mt-16">
-        <h1 class="font-extrabold text-4xl text-center">Latest Posts</h1>
-        <p class="text-center pt-5 text-text-color">
+        <div class="w-[350px] lg:w-[600px] pb-4  mx-auto">
+          <h1 class="font-extrabold text-4xl text-center">Latest Posts</h1>
+        <p class=" text-center pt-5 text-text-color ">
           Experience the thrill of discovery with our freshest content! From
-          breaking news to
-        </p>
-        <p class="text-center text-texr-color pb-10 text-text-color">
-          thought-provoking features, explore our latest posts and uncover
+          breaking news to thought-provoking features, explore our latest posts and uncover
           something new.
         </p>
 
+        </div>
+        
         <div id="latestPost-container" class="lg:flex gap-8 "></div>
       </section>
+
+
     </main>
+
+    <!-- footer -->
     <footer class="bg-gray-200 h-[380px] mt-20">
-      <div class="w-[90%] lg:w-[50%] mx-auto pt-16">
+      <div class="w-[350px] lg:w-[600px] mx-auto pt-16">
         <h1 class="text-center font-extrabold text-black text-3xl pb-6">
           ReTro
         </h1>
