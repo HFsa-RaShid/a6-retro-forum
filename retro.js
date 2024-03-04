@@ -66,7 +66,7 @@ const displayPosts = (post) =>{
         
         postCard.classList.add= `w-full bg-grey flex`;
         postCard.innerHTML= `
-        <div class="flex h-[200px] bg-[#F3F3F5] w-full mb-10 rounded-2xl pt-3 lg:pt-10" >
+        <div id="change-watch-post" class="flex h-[200px] bg-[#F3F3F5] w-full mb-10 rounded-2xl pt-3 lg:pt-10" >
                 <div class="w-[20%] ">
                     <div class="w-[70%] h-full lg:h-[60%] pl-2 lg:pl-8 relative">
                         <img src="${postInfo.image}" alt="" srcset="" class="rounded-xl">
@@ -80,7 +80,7 @@ const displayPosts = (post) =>{
                     
                     
                 </div>
-                <div class="w-[80%] text-[14px] text-[#12132D] bg-opacity-0.8 font-semibold">
+                <div  class="w-[80%] text-[14px] text-[#12132D] bg-opacity-0.8 font-semibold">
                     <div class="flex gap-10">
                     <p># <span>${postInfo.category}</span></p>
                     <p>Author :  <span>${postInfo.author.name}</span></p>
@@ -89,7 +89,8 @@ const displayPosts = (post) =>{
                         <p class="text-[#12132D] font-extrabold text-[20px] pt-3 pb-3">${postInfo.title}</p>
                         <p class="text-text-color pb-1 lg:pb-3">${postInfo.description}</p>
                     </div>
-                    <div class="flex">
+                    <hr class="border border-dashed">
+                    <div class="flex pt-2">
                         <div class="flex w-[90%] gap-10">
                             <div class="flex gap-4 items-center">
                             <svg width="22.500000" height="15.333374" viewBox="0 0 22.5 21.3334" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -167,9 +168,13 @@ const displayPosts = (post) =>{
 
         const clickMessage = postCard.querySelector('#click');
         clickMessage.addEventListener('click', () => {
+          
+          
             
             const appendDiv = document.createElement(`div`);
             appendDiv.classList.add('bg-white','h-[70px]','w-[90%]','mb-2','rounded-xl','mx-auto','p-3');
+            
+            
             appendDiv.innerHTML = `
                 <div class="flex justify-between pt-1 lg:pt-3">
                     <p class="font-semibold">${postInfo.title}</p>
@@ -190,8 +195,11 @@ const displayPosts = (post) =>{
             ReadMarkCount++;
             document.getElementById('ReadMarkCount').innerText=ReadMarkCount;
             // Append the new div to postReadMark
+            
             postReadMark.appendChild(appendDiv);
+            
         });
+        
         
         
     })
